@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-zinc-900 p-10 text-white">
+        <div class="nav mb-10">
+            <a class="text-blue-500" href="/read">Read User</a>
+        </div>
+
+        <h1 class="text-3xl text-yellow-500 tracking-tighter mb-3">Create User</h1>
+        <form action="/create" method="post">
+            <input class="px-4 py-3 border-2 border-yellow-100 outline-none rounded-md bg-transparent" type="text" name="name" placeholder="name">
+            <input class="px-4 py-3 border-2 border-yellow-100 outline-none rounded-md bg-transparent" type="email" name="email" placeholder="email">
+            <input class="px-4 py-3 border-2 border-yellow-100 outline-none rounded-md bg-transparent" type="text" name="image" placeholder="image url">
+            <input class="px-4 py-3 rounded-md bg-yellow-500 font-bold ml-3" type="submit" value="Create User">
+        </form>
+    </div>
+</body>
+</html>
