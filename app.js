@@ -12,6 +12,9 @@ app.use(express.static(path.join(__dirname,'public')))
 app.get('/', (req,res)=>{
     res.render('index')
 })
+
+//create user
+
 app.post('/create', async (req,res)=>{
     let {name , email , image} = req.body; // destructring
     const users = await userModel.create({
@@ -21,10 +24,16 @@ app.post('/create', async (req,res)=>{
     })
     res.redirect("/read")
 })
+
+//read user
+
 app.get('/read', async (req,res)=>{
     let users = await userModel.find();
     res.render('read', {users})
 })
+
+//Delete user
+
 app.get('/delete/:userid', async (req,res)=>{
     let users = await userModel.findOneAndDelete({_id:req.params.userid})
     res.redirect("/read")
