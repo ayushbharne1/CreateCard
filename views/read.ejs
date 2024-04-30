@@ -19,7 +19,7 @@
                     </div>
                     <h1 class="text-3xl tracking-tighter pt-2 pb-1 text-white"><%= user.name %></h1>
                     <h3 class="tracking-tighter pb-2 text-white"><%= user.email %></h1>
-                    <a class="text-xl tracking-tighter inline-block mr-10 text-green-500" href="#">Edit</a>
+                    <a class="text-xl tracking-tighter inline-block mr-10 text-green-500" href="/edit/<%= user._id %>">Edit</a>
                     <a class="text-xl tracking-tighter inline-block text-red-500" href="/delete/<%= user._id %>">Delete</a>
                 </div>
             <% }) %>
